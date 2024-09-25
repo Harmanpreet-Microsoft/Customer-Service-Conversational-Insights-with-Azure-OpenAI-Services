@@ -28,7 +28,7 @@ jobs:
         #  az role assignment create \
           ## --assignee ${{ secrets.AUTO_AZURE_CLIENT_ID }} \
            #--role "User Access Administrator" \
-           #--scope /subscriptions/${{ secrets.AUTO_AZURE_SUBSCRIPTION_ID }}/resourceGroups/PSLCkmDraft
+           ##--scope /subscriptions/${{ secrets.AUTO_AZURE_SUBSCRIPTION_ID }}/resourceGroups/PSLCkmDraft
       - name: Deploy Bicep Template
         id: deploy
         run: |
