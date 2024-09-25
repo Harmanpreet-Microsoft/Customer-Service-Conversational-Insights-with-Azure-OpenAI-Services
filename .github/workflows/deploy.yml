@@ -23,12 +23,12 @@ jobs:
       - name: Create Resource Group
         run: |
           az group create --name PSLCkmDraft --location eastus
-      - name: Assign role
-        run: |
-          az role assignment create \
-           --assignee ${{ secrets.AUTO_AZURE_CLIENT_ID }} \
-           --role "User Access Administrator" \
-           --scope /subscriptions/${{ secrets.AUTO_AZURE_SUBSCRIPTION_ID }}/resourceGroups/PSLCkmDraft
+      #- name: Assign role
+       # run: |
+        #  az role assignment create \
+          ## --assignee ${{ secrets.AUTO_AZURE_CLIENT_ID }} \
+           #--role "User Access Administrator" \
+           #--scope /subscriptions/${{ secrets.AUTO_AZURE_SUBSCRIPTION_ID }}/resourceGroups/PSLCkmDraft
       - name: Deploy Bicep Template
         id: deploy
         run: |
